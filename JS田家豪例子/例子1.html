@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例子</title>
+	<script type="text/javascript">
+		
+	function mySum(){
+		var i=1;
+		var j=2;
+	   var m=i+j;
+	    
+         document.getElementById("sid").innerText="i=1,j=2;i+j="+m;
+	}
+	     // innerHTML和innerText作用域在这个函数里是一样的。
+    
+
+	</script>
+</head>
+<body>
+	   
+       <font id="sid" color="#000">i=1,j=2;i+j=</font>
+    <button onclick="mySum()">结果</button>
+</body>
+</html>

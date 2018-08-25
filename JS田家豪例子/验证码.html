@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证码怎么写</title>
+	<script type="text/javascript">
+		var str="ABCDEFGHIJKLMNOPQRSTUVWSYZ0123456789";
+		var yzm="";
+		for(var i=1;i<=4;i++){
+			var p=Math.ceil(Math.random()*1000)%36;
+			yzm=yzm+str.substring(p,p+1);}
+		document.write("<table align='center' bgcolor='#' width='70'>")
+   document.write("<tr>")
+   document.write("<td>")
+  document.write("<font color='red' face='Arial' size='5'><i>"+yzm+"</i></font>");
+  document.write("</td>")
+  document.write("</tr>")
+	document.write("</table>")
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+
+</html>

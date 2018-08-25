@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+
+		document.write("<center>")
+		 for(i=1;i<=9;i++){
+               	if (i<=5) {
+               		var a=new Array(i+1).join("*");
+               		var b=new Array(6+i).join("&nbsp;");
+               		document.write(a+b+"<br>");
+               	} else {
+               	    var c=new Array(11-i).join("*");
+               		var d=new Array(6+i).join("&nbsp;");
+               		document.write(c+d+"<br>");
+               	}
+               }
+
+              document.write("</center>")
+
+
+		document.write("<center>")
+		  for(var i=1;i<=5;i++){
+                 for(var j=1;j<=5-i;j++)
+                   document.write(" ");
+                 for(var x=1;x<=2*i-1;x++)
+                   document.write("*");
+        
+                   document.write("<br/>");
+            }
+             for(var a=1;a<=6;a++){
+                 for(var b=1;b<=i;b++)
+                    document.write(" ");
+                 for(var y=11;y>=2*a-1;y--)
+                    document.write("*");
+                    document.write("<br/>");
+           }
+         document.write("</center>")
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

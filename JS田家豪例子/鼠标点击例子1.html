@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onchange改变事件</title>
+	<script type="text/javascript">
+          function change(){
+          	alert("你触发列change事件");
+          } 
+          function change1(){
+          	alert("你是谁？");
+          }
+	</script> 
+</head>
+<body>
+	<input type="text" name="t1" onchange="change();"  value="你好。"/>
+	<select name="s1" onchange="change1();">
+		<option value="1">a</option>
+		<option value="2">b</option>
+		<option value="3">c</option>
+		<option value="4">d</option>
+
+	
+</body>
+</html>

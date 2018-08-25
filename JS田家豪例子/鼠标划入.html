@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标划入onmouseover onmouseout</title>
+	<script type="text/javascript">
+     function change(flag){
+           var img1=document.getElementById("img1");
+           if(flag==1){
+           	img1.src="img/3.jpg";
+           }else{
+           	img1.src="img/1.jpg";
+           }
+          }
+	</script>
+</head>
+<body>
+	<img id="img1" src="img/3.jpg" width="600" onmouseover="change(0);" onmouseout="change(1);">
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菱形的想法</title>
+	<script type="text/javascript">
+		//首先先实施一个*的换行
+		//document.write("*<br>");//成功。
+		//----------------------------------
+		//然后再在打一行6个*
+		//for(var i=0;i<6;i++){
+			//document.write("*");//成功。
+		//}
+		//-----------------------------------
+		//然后再打一个6列的*
+	//for(var i=0;i<6;i++){
+		//document.write("*<br>");//成功。
+	//}
+	//-------------------------------------
+	  //现在我可以试一下6行6列的*
+	  /*for(var i=0;i<6;i++){
+	  	for(var j=0;j<6;j++){
+	  		document.write("*");//这里每出现一个*的话就要显示换行。
+	  	}document.write("<br>");//成功。
+
+	  }*/
+	  //------------------------------------
+	  //然后在用乘法表的方式写*
+	  /*for(var i=0;i<6;i++){
+	  	for(j=0;j<=i;j++){//这里要注意j它在循环里的变化，当j<i就会随着变化而变化。
+	  		document.write("*");
+	  	}document.write("<br>");
+	  } /*现在它输出的方式和乘法表基本一样。成功。*/
+	  //现在就差一个空格。
+	  /*for(var i=0;i<6;i++){
+	  	for(var j=0;j<5;j++){
+	  		document.write("&nbsp;&nbsp;&nbsp;");}
+	  	document.write("*<br>");
+	  	}*/
+	  	//写到这里还是一个头绪也没有。
+	  	//玩只能用一个笨办法啦。
+	  	/*for(var a=0;a<6;a++){
+	  		for(var b=0;b<6-a-1;b++){
+	  			document.write("&nbsp;");
+	  		}for(var c=0;c<(2*a-1)+1;j++){
+	  		document.write("*");
+             }document.write("<br>");
+	  	   
+	  	}*/
+	  	
+	  	document.write("<center>")
+	for(var i=1;i<=5;i++){
+	 	for(var j=1;j<=5-1;j++){
+	 		document.write(" ");
+	 	}
+	 	for(var x=1;x<=i-1;x++){
+	 		document.write("*");
+	 	}
+	 	document.write("<br>");
+	 }
+	   for(var a=1;a<=6;a++){
+	   	  for(var b=1;b<=a;b++){
+	   		document.write(" ");
+	   	}
+	   	for(var c=1;c<=6-1*a;c++){
+	   		document.write("*");
+	   	}
+	   	document.write("<br>");
+	   }
+	  
+document.write("</center>")
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

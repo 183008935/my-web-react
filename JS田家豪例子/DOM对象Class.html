@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM对象name</title>
+	<style type="text/css">
+		/*控制HTML怎么显示，显示成什么样子,
+		样式给谁用，不给谁用的规定-选择器*/
+		p{/*标签选择器，所有的同名标签自动生效。*/
+			
+		font-size:20px;
+		color:#ff0;
+		background:#000;
+	     }
+	    .test{
+	    	color:#fff;
+	    }
+
+        .aa{
+         	background:#009;
+         }
+
+        .aaa{
+        	background:#099;
+        }
+        .aaaa{
+          	background:#ff0;
+
+        }
+	</style>
+</head>
+<body>
+	<img src="img/1.jpg" width="200">
+	<p id="p1">p1</p>
+	<p id="p2" class="test">p2</p>
+	<p id="p3">p3</p>
+	<p id="p4">p4</p>
+	  <input type="checkbox" name="a1">数学
+	  <input type="checkbox" name="a1">语文
+	  <input type="checkbox" name="a1">英语
+	  <input type="checkbox" name="a1">历史
+</body>
+<script type="text/javascript">
+	var p1=document.getElementById("p1");
+	p1.onclick=function(){
+		alert("程琳是帅哥");
+	}
+
+
+
+
+</script>
+</html>

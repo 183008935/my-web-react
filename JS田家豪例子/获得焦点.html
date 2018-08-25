@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获得焦点onfoucs onblur</title>
+	<script type="text/javascript">
+           function tips(){
+           	var sp1=document.getElementById("sp1");
+           	sp1.innerHTML="你触发列onfocus事件";
+           }
+ function tips2(){
+           	var sp1=document.getElementById("sp1");
+           	sp1.innerHTML="你触发了onblur事件";
+           }
+
+
+	</script>
+</head>
+<body>
+	 <input type="text" onfocus="tips()" onblur="tips2();">
+	 <span id="sp1"></span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器2</title>
+	<script type="text/javascript">
+    /* function test(){
+     	document.write("田家豪是帅哥<br>");
+
+     }
+        test();
+        window.setInterval(test,1000);*/
+
+
+        var i=1;
+        function test(){
+        	document.write(i+"<br>");
+        	if(i==10){
+                  clearInterval(sid);
+        	}
+        	i++;
+        }
+            var sid=setInterval(test,1000);
+            var a=setInterval(test,1000);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

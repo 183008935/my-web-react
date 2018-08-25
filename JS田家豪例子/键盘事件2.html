@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件2</title>
+	<script type="text/javascript">
+		
+		function showNum(){
+           var tips=document.getElementById("tips");
+          var t1=document.getElementById("t1");
+          tips.innerHTML=t1.value.length;
+		}
+	</script>
+</head>
+<body>
+	<textarea id="t1" cols="100" rows="10" onkeyup="showNum();"></textarea>
+	<span id="tips"></span>字数
+</body>
+</html> 

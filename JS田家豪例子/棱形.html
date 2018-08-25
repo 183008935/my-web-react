@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>棱形</title>
+	<script type="text/javascript">
+		document.write("<p align='center'>");
+		/*for(i=1;i<=9;i++)
+			{
+				if(i<=5){
+				var x=new Array(i+1).join("*");
+				var j=new Array(7-i).join("&nbsp;");
+				document.write(j+x+"<br>");
+			}else{
+				  var a=new Array(11-i).join("*");
+				  var b=new Array(i-6).join("&nbsp;");
+				 document.write(a+b+"<br>");
+			}
+		}
+               document.write("</p>")*/
+             for(i=1;i<=9;i++){
+               	if (i<=5) {
+               		var a=new Array(i+1).join("*");
+               		var b=new Array(6+i).join("&nbsp;");
+               		document.write(a+b+"<br>");
+               	} else {
+               	    var c=new Array(11-i).join("*");
+               		var d=new Array(6+i).join("&nbsp;");
+               		document.write(c+d+"<br>");
+               	}
+               }
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
