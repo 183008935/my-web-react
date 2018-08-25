@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动门</title>
+		<style>
+			#div1 div{
+				width: 400px;
+				height: 400px;
+				background-color:#009;
+				color:#fff;
+				display: none;
+			}
+			.one{
+				background-color:#ff0;
+			}
+				
+		</style>
+		<script>
+			window.onload=function(){
+				var div1=document.getElementById("div1");
+				var inputs=div1.getElementsByTagName("input");
+				var divs=div1.getElementsByTagName("div");
+				for(var i=0;i<divs.length;i++){
+					inputs[i].x=i;
+					inputs[i].onclick=function(){
+						for(var j=0;j<divs.length;j++){
+							inputs[j].className="";
+							divs[j].style.display="none";
+						}
+						this.className="one";
+						divs[this.x].style.display="block";
+					}
+				}	
+			}	
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<input type="button" value="导航1">
+			<input type="button" value="导航2">
+			<input type="button" value="导航3">
+			<div style="display:block">内容1</div>
+			<div>内容2</div>
+			<div>内容3</div>
+		</div>
+	</body>
+</html>

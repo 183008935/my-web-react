@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图完整版</title>
+    <style>
+     body{
+         margin:0px;
+         padding:0px;
+     }
+     #div1{
+         width:700px;
+         height:400px;
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%,-50%);
+         border-top:10px solid #000;
+         border-bottom:10px solid #000;
+         border-left:10px solid #000;
+         border-right:10px solid #000;
+         border-radius:15px;
+         box-shadow:10px 10px 15px 3px #000; 
+     }
+     img{
+         float:left;
+         width:700px;
+         height:400px;
+         display:none;
+     }
+     #lefts{
+              background:#000;
+              color:#fff;
+              position:absolute;
+              top:190px;
+              left:10px;
+              padding:10px;
+              text-align: center;
+     }
+     #rights{
+         background:#000;
+         color:#fff;
+         position:absolute;
+         top:190px;
+         right:10px;
+         padding:10px;
+         text-align:center;
+     }
+      #lefts:hover{
+          background-color:rgba(255, 255, 255, 0.438);
+          color:#000;
+      }
+      #right:hover{
+          background-color:rgba(255, 255, 255, 0.438);
+          color:#000
+      }
+      ul{
+          list-style:none;
+          position:absolute;
+          top:350px;
+          left:165px;
+          
+      }
+      ul li{
+          float:left;
+          width:50px;
+          height:10px;
+          background:#000;
+          margin-left:8px;
+      }
+      .li1{
+          background:#fff;
+      }
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/1.jpg" style="display:block"/>
+        <img src="img/3.jpg"/>
+        <img src="img/2.jpg"/>
+        <img src="img/4.jpg"/>
+        <img src="img/5.jpg"/>
+        <span id="lefts">&lt;</span>
+        <span id="rights">&gt;</span>
+        <ul>
+            <li class="li1"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    var img=document.getElementsByTagName("img");
+    var div1=document.getElementById("div1")
+    var ks=0;
+    function times(xc){
+        ks=ks+xc;
+        if(ks>img.length-1){
+            ks=0
+        }
+        if(ks<0){
+            ks=img.length-1;
+        }
+        for(var i=0;i<img.length;i++){
+            img[i].style.display="none";
+            li1[i].style.background="#fff"
+        }
+        img[ks].style.display="block";
+        li1[ks].style.background="#000"
+    }
+    var stop=setInterval(function(){
+        times(1);
+    },2000)
+     var lt=$("lefts");
+     var gt=$("rights");
+       gt.onclick=function(){
+           times(1);
+       }
+       lt.onclick=function(){
+           times(-1);
+       }
+       div1.onmouseover=function(){
+           gt.style.display="block"
+           lt.style.display="block"
+           clearInterval(stop);
+       }
+       div1.onmouseout=function(){
+           gt.style.display="none"
+           lt.style.display="none"
+        stop=setInterval(function(){
+        times(1);
+    },2000);
+       };
+       var li1=document.getElementsByTagName("li");
+       for(var j=0;j<li1.length;j++){
+           li1[j].wz=j;
+           li1[j].onmousemove=function(){
+               var dq=this.wz-ks;
+               times(dq);
+           }
+       }
+</script>

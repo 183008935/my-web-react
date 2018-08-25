@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数构造器</title>
+    <script>
+        
+        function mz(a,b,c){
+            this.name=a;
+            this.age=b;
+            this.sex=c;
+            this.fangfa=function(){ alert("姓名:"+this.name+"\n"+"年龄:"+this.age+"\n"+this.sex);};};
+         var s=new mz("李少可",20,"女");
+         alert(s.name);
+         s.fangfa();
+          function t(a,b){
+              return a+b };
+          alert(t(5,6));
+     
+       
+    </script>
+</head>
+<body>
+        题目点评<br>
+
+        主要考察你对面向对象编程的理解，特别是对象的指向问题，如果连对象的指向都搞不清楚，
+        很难说明你是一个优秀的前端开发人员，所以回答this的知识点是体现你的身价的时候到来了！
+        如果能够回答好这个问题，那么在面试上你是增值的。个人建议，可以先回答this在不同的场合指向的是什么，
+        在来回答什么时候用到this，这样回答的逻辑会比较好。<br>
+        
+        this的指向<br>
+        
+        this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写，例如：<br>
+        
+         this.alert()= window.alert()= alert(); <br>
+        
+        调用的上下文环境包括全局和局部<br>
+
+        全局环境<br>
+
+全局环境就是在<script></script>里面，这里的this始终指向的是window对象，<br>
+
+局部环境
+<br>
+1）在全局作用域下直接调用函数，this指向window<br>
+
+2）对象函数调用，哪个对象调用就指向哪个对象<br>
+
+3）使用 new 实例化对象，在构造函数中的this指向实例化对象。<br>
+
+4）使用call或apply改变this的指向<br>
+
+1. 用于区分全局变量和局部变量，需要使用this<br>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变量循环</title>
+    <script>
+        function hs(a,b,c){
+            while(a<=c){
+                if(a==c){
+                    a++;
+                    a++;
+                    document.write(a+++"<br>");}
+                for(b=a;b>=a-b;b++){
+                    if(a=b){ b=a+b; }
+                   c=a+b;
+                   b=c-a;
+                   b=a-b;
+                   document.write(b+++"<br>")
+                   document.write(wei(a,b,c)+"<br>");
+                   c=a+b+c;
+                   return c };
+                   function wei(d,e,f){
+                       d=d+e;e=d+f;f=d+e; return d+e+f;} 
+                   }
+                    }
+        document.write(hs(1,2,3))
+           
+        var age=20;  
+function show(age){  
+   return this.age=age;  
+} 
+  alert(show());
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

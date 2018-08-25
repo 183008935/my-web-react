@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lunbotu</title>
+    <style>
+        #div1{
+            width:700px;
+            height:400px;
+            position:absolute;
+        }
+       img{
+           width:700px;
+           height:400px;
+           display:none;   
+       }
+       #div1 #rights{
+           background-color:#ff0;
+           position:absolute;
+           right:10px;
+           top:200px;
+           padding:5px; 
+       }
+       #div1 #lefts{
+           background-color:#f00;
+           position:absolute;
+           left:10px;
+           top:200px;
+           padding:5px;
+       }
+       #div1 #rights:hover{
+        background-color:#ff9;
+       }
+       #div1 #lefts:hover{
+           background-color:#ff9;
+       }
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/1.jpg" style="display:block">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+        <span id="rights">&gt;</span>
+        <span id="lefts">&lt;</span>
+    </div>
+</body>
+</html>
+<script>
+    var img=document.getElementsByTagName("img");
+    var ks=0;
+    var div1=$("div1");
+    var gt=$("rights");
+    var lt=$("lefts");
+    function $(id){
+        return document.getElementById(id);
+    }  
+    function shijian(cs){
+        ks=ks+cs;
+        if(ks>img.length-1){
+            ks=0;
+        }
+        if(ks<0){
+            ks=img.length-1;
+        }
+         for(var i=0;i<img.length;i++){
+             img[i].style.display="none";
+         }
+         img[ks].style.display="block";
+    };
+    var sj=setInterval(function(){
+        shijian(1);
+    },1000);
+         gt.onclick=function(){
+             shijian(1);
+         }
+         lt.onclick=function(){
+             shijian(-1);
+         }
+         div1.onmousemove=function(){
+             clearInterval(sj);      
+         }
+         div1.onmouseout=function(){
+            sj=setInterval(function(){
+        shijian(1);},1000);
+         }
+</script>

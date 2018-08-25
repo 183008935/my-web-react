@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lunbotu</title>
+    <style>
+        #div{
+            width:800px;
+            height:400px;
+        }
+        img{
+            width:800px;
+            height:400px;
+            float:left;
+            display:none;
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/1.jpg" style="display:block">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+    </div>
+</body>
+</html>
+<script>
+    var imgs=document.getElementsByTagName("img");
+    var ks=0;
+    setInterval(function(){
+        ks++;
+        if(ks==imgs.length){
+            ks=0
+        }
+        for(i=0;i<imgs.length;i++){
+            imgs[i].style.display="none";
+        }
+           imgs[ks].style.display="block";
+    },1000)
+</script>

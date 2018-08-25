@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	#ww{
+		position: absolute;
+		top:100px;
+		left:100px;
+
+	}
+	
+	
+	</style>
+</head>
+<body>
+	<img id="ww"  src="img/1.jpg" alt=""  onclick="huanweizhi()">
+
+</body>
+<script>
+	var rr=document.getElementById("ww");
+function huanweizhi(){
+ var tishi = prompt("请输入宽", 0)
+   tishi=tishi-0;
+		var tishi2 = prompt("请输入高", 0)
+		tishi2=tishi2-0;
+		rr.style.top =( rr.style.top + (tishi2 - rr.style.top))+"px";
+		rr.style.left = (rr.style.left + (tishi - rr.style.left))+"px";}
+</script>
+</html>

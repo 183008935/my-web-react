@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滑动门</title>
+    <style>
+      
+        
+       #nav div{
+           width:200px;
+           height:200px;
+           background-color:#090;
+           color:#fff;
+           display: none;
+       }
+       .one{
+           background: #ff0;
+       }
+    </style>
+    <script>
+        window.onload=function(){
+            var nav=document.getElementById("nav");
+            var inputs=nav.getElementsByTagName("input");
+            var divs=nav.getElementsByTagName("div");
+            for(var i=0;i<divs.length;i++){
+                inputs[i].x=i;
+                inputs[i].onclick=function(){
+                    for(var j=0;j<inputs.length;j++){
+                        inputs[j].className="";
+                        divs[j].style.display="none";
+                    }
+                    this.className="one";
+                    divs[this.x].style.display="block";
+                }
+            }
+        }
+    
+    </script>
+  
+</head>
+<body>
+    <div id="nav">
+        <input type="button" value="导航1">
+        <input type="button" value="导航2">
+        <input type="button" value="导航3">
+        <div  style="display:block">内容0001</div>
+        <div>内容0002</div>
+        <div>内容0003</div>
+    </div>
+</body>
+<!-- <script>
+   var inputs=document.getElementsByTagName("input");
+   var nav=document.getElementById("nav");
+   var divs=nav.getElementsByTagName("div");
+   for(var i=0;i<inputs.length;i++){
+       inputs[i].index=i;
+       inputs[i].onmouseover=function(){
+           for(var j=0;j<inputs.length;j++){
+               divs[j].style.display="none";
+               inputs[j].className="";
+           }
+           this.className="active";
+           divs[this.index].style.display="block";
+       }
+   }
+
+</script> -->
+</html>

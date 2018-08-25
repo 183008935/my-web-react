@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            }
+        #div1{
+            width:500px;
+            height:300px;
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            border-top:7px solid #000;
+            border-left:7px solid #000;
+            border-right:7px solid #000;
+            border-bottom:7px solid #000;
+            border-radius:15px;
+            box-shadow:8px 8px 8px 3px #100;  
+        }
+        #div1 img{
+            width:500px;
+            height:300px;
+            display:none;
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);   
+        }
+        #rights{
+              background:rgb(0,0,0);
+              color:#fff;
+              position:absolute;
+              right:10px;
+              top:140px;
+              padding:8px;
+              border-radius:50px;
+        }
+        #lefts{
+            background:rgb(0,0,0);
+            color:#fff;
+            position:absolute;
+            left:10px;
+            top:140px;
+            padding:8px;
+            border-radius:50px;
+        }
+        #lefts:hover{
+            background-color:#fff;
+            color:#000;}
+        
+        #rights:hover{
+            background-color:#fff;
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+      <div id="div1">
+          <img src="img/1.jpg" style="display:block"/>
+          <img src="img/2.jpg"/>
+          <img src="img/3.jpg"/>
+          <img src="img/4.jpg"/>
+          <img src="img/5.jpg"/>
+          <span id="rights">&gt;</span>
+          <span id="lefts">&lt;</span>
+      </div>
+</body>
+</html>
+<script>
+   var div1=document.getElementById("div1");
+   var img=document.getElementsByTagName("img");
+   var ks=0;
+   var gt=document.getElementById("rights");
+   var lt=document.getElementById("lefts");
+    // var sjt=setInterval(function(){
+    //     ks++;
+    //     if(ks==img.length){
+    //         ks=0;
+    //     }
+    //     for(var i=0;i<img.length;i++){
+    //         img[i].style.display="none";
+    //     }
+    //     img[ks].style.display="block";
+    // },2000)
+    function $(fs,qs){
+        ks=qs;
+        var timer=setInterval(function(){
+            ks=ks+fs;
+            if(ks>img.length-1){
+                ks=0;
+            }
+            if(ks<0){
+                ks=qs;
+            }
+            for(var i=0;i<img.length;i++){
+            img[i].style.display="none";
+        }
+        img[ks].style.display="block";
+        },1000)
+    }
+ $(-1,4);
+
+
+
+
+
+
+
+</script>

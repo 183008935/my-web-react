@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图1</title>
+    <style>
+      #div1{
+          width:800px;
+          height:400px;
+          margin:0px auto; 
+      }
+      
+     #div1 img{
+         vertical-align: top;
+         top:150px;
+         width:800px;
+         height:400px;
+         position:absolute;
+         opacity:0;
+         transition: 2s;
+          border:1px solid #000;
+     }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/1.jpg" style="opacity:1">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+    </div>
+</body>
+</html>
+<script>
+    var img=document.getElementsByTagName("img");
+    var ks=0;
+        setInterval(function(){ ks++;
+            if(ks==img.length){ ks=0}
+            for(i=0;i<img.length;i++){
+                img[i].style.opacity="0"}
+            img[ks].style.opacity="1";
+        },3000)
+</script>
