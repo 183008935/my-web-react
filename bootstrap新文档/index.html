@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,
+       maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>  
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">农夫山泉</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">成功案例</a></li>
+        <li><a href="#">产品展示</a></li>
+        <li><a href="#">招商代理</a></li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="农夫山泉">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">CEO:田家豪</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">联系我们<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">手机:15166666666</a></li>
+            <li><a href="#">email:183008935@qq.com</a></li>
+            <li><a href="#">地区:北京</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">分公司:上海</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--图片轮播-->
+  <div class="container" style="margin-top:55px">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!--轮播图片的提示点-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+        </ol>
+        <!--轮播图片-->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/11.jpg" alt="1">
+                <div class="carousel-caption">
+                    <h4>农夫山泉</h4><!--可以设置浮动在图片上面的文字-->
+                    <p>世界选择我们，我们也选择世界！</p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="images/12.jpg" alt="2">
+               <div class="carousel-caption">
+                    <h4>农夫山泉</h4><!--可以设置浮动在图片上面的文字-->
+                    <p>世界选择我们，我们也选择世界！</p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="images/13.jpg" alt="3">
+               <div class="carousel-caption">
+                    <h4>农夫山泉</h4><!--可以设置浮动在图片上面的文字-->
+                    <p>世界选择我们，我们也选择世界！</p>
+                </div>
+            </div>
+        </div>
+        <!--左右滑动图标-->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" ></span>
+        
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+</div>
+<!--略缩图样式-->
+<div class="container">
+    <div class="col-sm-6 col-md-3">
+         <div class="thumbnail">
+            <img src="images/4.jpg" 
+             alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>CEO:田家豪</h3>
+                <p>出生于1992年，籍贯：邯郸市永年县，职业:高级前端工程师；</p>
+                
+                
+            </div>
+         </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="images/5.jpg" 
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>CTO:杨瑞超</h3>
+                <p>出生于1997年，籍贯：邯郸市曲周县，职业:高级全栈工程师；</p>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="images/6.jpg" 
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>CTO媳妇:吕旅</h3>
+                <p>出生于1998年，籍贯：保定市，职业:高级前端工程师；</p>
+               
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3" >
+        <div class="thumbnail">
+            <img src="images/7.jpg" 
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>总策划:王尧令</h3>
+                <p>出生于1991年，籍贯：邯郸市永年县，职业:注册会计师；</p>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!--略缩图样式-->
+<!-- ················································· -->
+<!--媒体对象-->
+<div class="container">
+<ul class="media-list">
+  <li class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="images/8.jpg" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">小程序研发</h4> 微信小程序（wei xin xiao cheng xu），简称小程序，英文名Mini Program，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。全面开放申请后，主体类型为企业、政府、媒体、其他组织或个人的开发者，均可申请注册小程序。小程序、订阅号、服务号、企业号是并行的体系。
+    </div>
+  </li>
+</ul>
+<ul class="media-list">
+  <li class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="images/9.jpg" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">微信公众号</h4>信公众平台 编辑
+微信公众平台，简称公众号。曾命名为“官号平台”、“媒体平台”、微信公众号，最终定位为“公众平台”，无疑让我们看到一个微信对后续更大的期望。利用公众账号平台进行自媒体活动，简单来说就是进行一对多的媒体性行为活动，如商家通过申请公众微信服务号通过二次开发展示商家微官网、微会员、微推送、微支付、微活动、微报名、微分享、微名片等，已经形成了一种主流的线上线下微信互动营销方式。
+  </li>
+</ul>
+<ul class="media-list">
+  <li class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="images/10.jpg" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">博客研发</h4>
+      博客，仅音译，英文名为Blogger,为Web Log的混成词。它的正式名称为网络日记；又音译为部落格或部落阁等，是使用特定的软件，在网络上出版、发表和张贴个人文章的人，或者是一种通常由个人管理、不定期张贴新的文章的网站。
+    </div>
+  </li>
+</ul>
+</div>
+
+<!--媒体对象-->
+
+<!--介绍结束-->
+           <div class="container">
+           <div class="row   alert alert-info" >
+                 <div class="col-md-8 col-sm-8">
+                      <h1>  机会不会主动找到你，必须亮出你自己。</h1>
+                 </div>
+                 <div class="col-md-4 col-sm-4" style="padding-top: 15px;">
+                     <a href="#" class=" btn btn-primary btn-lg">GRAB IT HERE NOW</a> 
+                 </div>
+                          
+               </div>
+               </div>
+      
+ <!--介绍结束-->       
+
+<!-- 页脚 -->
+<footer class="bs-docs-footer" style="background: #000;color: #fff">
+  <div class="container">
+   
+
+    <p>用世界上所有的爱设计和建造 <a href="https://twitter.com/mdo" target="_blank">@农夫山泉</a> 。维护由 <a href="https://github.com/orgs/twbs/people">核心团队</a> 借助于<a href="https://github.com/twbs/bootstrap/graphs/contributors">我们的贡献者</a>.</p>
+
+    <p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护，2018-8-1。</p>
+
+  </div>
+</footer>
+ 
+<!-- 页脚 -->
+
+
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
