@@ -16,8 +16,6 @@ module.exports={
             template:"./src/index.html"
         }),
         new Webpack.ProvidePlugin({
-            $:"jquery",
-            jQuery:"jquery",
             React:'react',
             ReactDOM:'react-dom',
             PT:'prop-types'
