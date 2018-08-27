@@ -44,13 +44,13 @@ export default class Ietm  extends React.Component{
 
 
       }
-      onkeyUp(ev){
+      onkeyUp(ev){  //ESC 事件
         let {value}=this.props.todo;
           if(ev.keyCode !==27){
               return;
           }
           this.setState({
-            inEnit:true,
+            inEnit:false,
             val:value
         })
       }
@@ -101,7 +101,7 @@ export default class Ietm  extends React.Component{
                 onKeyDown={onEnter}
                 onChange={inputChange}
                 ref="editInput"
-                onkeyUp={onkeyUp}
+                onKeyUp={onkeyUp}
                 />
             </li>
         )
