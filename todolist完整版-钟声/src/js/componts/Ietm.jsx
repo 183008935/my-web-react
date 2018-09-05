@@ -75,7 +75,7 @@ export default class Ietm extends Component {
 
         let  itemClassName=todo.hasCompleted?'completed':'';  //用变量来控制什么时候编辑  
 
-         if(inEdit){itemClassName+='editing'}   //通过状态来控制什么时候可以编辑
+         if(inEdit){itemClassName+=' editing'}   //通过状态来控制什么时候可以编辑
         return (
              <li className={itemClassName}> 
                  <div className="view">
