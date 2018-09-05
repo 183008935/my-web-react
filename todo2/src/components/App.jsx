@@ -30,6 +30,12 @@ export default class App extends Component {
             }
             return elt;
         })
+        if(todo.value==""){
+            todosDate=todosDate.filter(elt=>{
+                return elt.id!==todo.id
+            })
+        }
+      this.setState({todosDate})
 
     }
 
