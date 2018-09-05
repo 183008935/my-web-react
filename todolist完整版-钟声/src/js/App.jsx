@@ -28,6 +28,12 @@ class App extends React.Component{
            }
            return elt;  //返回值；
          })
+         if(todo.value==""){   //如果值为空。
+          todosData=todosData.filter(elt=>{
+              return elt.id!==todo.id
+          })
+      }
+    this.setState({todosData})
    }
 
 
